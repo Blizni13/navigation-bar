@@ -7,22 +7,26 @@ body {
     padding: 0;
 }
 
-.fa-solid {
-    position: absolute;
-    top: 2%;
-    right: 10%;
-    font-size: 3rem;
-    color: white;
-    transition-duration: 1s;
+:root {
+    --icons-color: white;
 }
 
 #navbar {
     position: fixed;
-    width: 150px;
+    width: 170px;
     height: 100vh;
     background-color: rgb(20, 30, 40);
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
+}
+
+.fa-solid {
+    position: absolute;
+    top: 2%;
+    right: 10%;
+    font-size: 2.5rem;
+    color: var(--icons-color);
+    transition-duration: 1s;
 }
 
 #navbar:hover {
@@ -31,4 +35,47 @@ body {
 
 #navbar:hover .fa-solid {
     transform: rotateY(180deg);
+}
+
+#navbar:hover #logo {
+    left: 50%;
+    transform: translate(-70%);
+}
+
+#logo {
+    position: absolute;
+    color: var(--icons-color);
+    font-size: 2rem;
+    left: 8%;
+    top: 1.5%;
+    font-family: "Open Sans", sans-serif;
+    transition-duration: 0.7s;
+    transition-delay: 0ms;
+}
+
+.page-nav {
+    position: absolute;
+    height: 91%;
+    margin-top: 87px;
+    width: 100%;
+}
+
+#list {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 70px;
+    color: white;
+    font-size: 2rem;
+    list-style: none;
+}
+
+.list-element {
+    margin-left: -25px;
+    transition-duration: 0.7s;
+    transition-delay: 0ms;
+}
+
+#navbar:hover .list-element {
+    margin-left: 70px;
 }
