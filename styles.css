@@ -97,10 +97,10 @@ body {
     margin-left: 50px;
     font-family: Arial, sans-serif;
     font-size: 2rem;
-    color: var(--bg-nav-color);
     animation-name: content-appear;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    transition: 1s;
 }
 
 #navbar:hover .fa-home::after {
@@ -136,10 +136,12 @@ body {
     padding-top: 32px;
 }
 
+
 #list li:hover {
     background-color: var(--hover-bg_logo-color);
     cursor: pointer;
 }
+
 
 #list li:hover .fas {
     color:rgb(120, 0, 255);
@@ -160,10 +162,10 @@ body {
 
 @keyframes content-appear {
     0% {
-        color: rgb(20, 30, 40)
+        color: var(--bg-nav-color)
     }
 
     100% {
-        color: var(--icons-color)
+        color: white;
     }
 }
