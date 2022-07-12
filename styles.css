@@ -11,6 +11,8 @@ body {
     --icons-color: white;
 }
 
+/* Setting appearance of navbar */
+
 #navbar {
     position: fixed;
     width: 170px;
@@ -18,11 +20,12 @@ body {
     background-color: rgb(20, 30, 40);
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
+    color: var(--icons-color)
 }
 
-.fa-solid {
+.fa-location-arrow {
     position: absolute;
-    top: 2%;
+    top: 20%;
     right: 10%;
     font-size: 2.5rem;
     color: var(--icons-color);
@@ -30,11 +33,14 @@ body {
 }
 
 #navbar:hover {
-    width: 300px;
+    width: 320px;
 }
 
 #navbar:hover .fa-solid {
     transform: rotateY(180deg);
+    animation-name: color;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 #navbar:hover #logo {
@@ -47,7 +53,7 @@ body {
     color: var(--icons-color);
     font-size: 2rem;
     left: 8%;
-    top: 1.5%;
+    top: 15%;
     font-family: "Open Sans", sans-serif;
     transition-duration: 0.7s;
     transition-delay: 0ms;
@@ -60,22 +66,84 @@ body {
     width: 100%;
 }
 
+/* setting appearance of icons in list*/
+
 #list {
     display: flex;
     height: 100%;
     flex-direction: column;
-    gap: 70px;
-    color: white;
-    font-size: 2rem;
+    gap: 7rem;
+    font-size: 2.2rem;
     list-style: none;
+    margin-top: 60px;
+    margin-left: 20px;
 }
 
-.list-element {
-    margin-left: -25px;
-    transition-duration: 0.7s;
-    transition-delay: 0ms;
+.fa-gamepad {
+    margin-left: -5px;
 }
 
-#navbar:hover .list-element {
-    margin-left: 70px;
+.fa-circle-dollar-to-slot {
+    margin-left: -3px
+}
+
+
+/* text displayed after hover */
+
+#navbar:hover .fa-home::after, #navbar:hover .fa-gift::after, #navbar:hover .fa-gamepad::after, #navbar:hover .fa-circle-dollar-to-slot::after {
+    margin-left: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+}
+
+#navbar:hover .fa-gamepad::after{
+    margin-left: 43px;
+}
+
+#navbar:hover .fa-home::after {
+    content: "home";
+}
+
+#navbar:hover .fa-gift::after {
+    content: "product"
+}
+
+#navbar:hover .fa-gamepad::after {
+    content: "options"
+}
+
+#navbar:hover .fa-circle-dollar-to-slot::after {
+    content: "prices"
+}
+
+/*--------------------------*/
+
+
+#nav-title {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 70px;
+    top: 2%;
+}
+
+@keyframes color {
+    0% {
+        color: var(--icons-color);
+    }
+
+    100% {
+        color: rgb(140, 0, 207);
+    }
+}
+
+@keyframes size {
+    0% {
+        font-size: 2rem;
+    }
+
+    100% {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
 }
