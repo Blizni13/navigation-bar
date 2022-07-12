@@ -74,11 +74,10 @@ body {
     margin-top: 120px;
     display: flex;
     flex-direction: column;
-    gap: 7rem;
+    gap: 3rem;
     font-size: 2.2rem;
     list-style: none;
     padding-block: 10px;
-    padding-left: 65px;
 }
 
 .fa-gamepad {
@@ -122,16 +121,14 @@ body {
     top: -5px;
 }
 
-#list {
-    background-color: green;
-}
-
 #list li {
     position: relative;
-    background-color: red;
-    margin-left: 0;
-    width: 100%;
-    left: 0;
+    margin-left: -64.6px;
+    width: 344.5px;
+    padding-left: 90px;
+    height: 100px;
+    vertical-align: middle;
+    padding-top: 30px;
 }
 
 /*--------------------------*/
