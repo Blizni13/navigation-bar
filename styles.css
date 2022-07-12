@@ -122,10 +122,19 @@ body {
     top: -5px;
 }
 
+#list {
+    background-color: green;
+}
+
+#list li {
+    position: relative;
+    background-color: red;
+    margin-left: 0;
+    width: 100%;
+    left: 0;
+}
+
 /*--------------------------*/
-
-
-
 
 @keyframes color {
     0% {
