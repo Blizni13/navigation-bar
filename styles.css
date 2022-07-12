@@ -9,6 +9,8 @@ body {
 
 :root {
     --icons-color: white;
+    --bg-nav-color: rgb(5, 15, 25);
+    --hover-bg_logo-color: rgba(0, 0, 0, 0.2)
 }
 
 /* Setting appearance of navbar */
@@ -17,7 +19,7 @@ body {
     position: fixed;
     width: 170px;
     height: 100vh;
-    background-color: rgb(20, 30, 40);
+    background-color: var(--bg-nav-color);
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
     color: var(--icons-color);
@@ -26,7 +28,7 @@ body {
 
 #nav-title {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--hover-bg_logo-color);
     width: 100%;
     height: 70px;
     top: 2%;
@@ -95,12 +97,11 @@ body {
     margin-left: 50px;
     font-family: Arial, sans-serif;
     font-size: 2rem;
-    color: rgb(20, 30, 40);
+    color: var(--bg-nav-color);
     animation-name: content-appear;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
-
 
 #navbar:hover .fa-home::after {
     content: "home";
@@ -129,6 +130,20 @@ body {
     height: 100px;
     vertical-align: middle;
     padding-top: 30px;
+}
+
+#list li:nth-of-type(3) {
+    padding-top: 32px;
+}
+
+#list li:hover {
+    background-color: var(--hover-bg_logo-color);
+    cursor: pointer;
+}
+
+#list li:hover .fas {
+    color:rgb(120, 0, 255);
+    transition-duration: 1s;
 }
 
 /*--------------------------*/
